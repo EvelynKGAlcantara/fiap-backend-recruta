@@ -26,8 +26,9 @@
 			<tag/>
 			<url/>
 		</scm>
+		<!-- Propriedades -->
 		<properties>
-			<java.version>22</java.version>
+			<java.version>17</java.version> <!-- Alterado para JDK 17 -->
 		</properties>
 		<dependencies>
 			<dependency>
