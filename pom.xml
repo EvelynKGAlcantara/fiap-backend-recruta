@@ -5,7 +5,7 @@
 		<parent>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-parent</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.2</version>
 			<relativePath/> <!-- lookup parent from repository -->
 		</parent>
 		<groupId>br.com.recruta</groupId>
@@ -66,6 +66,16 @@
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<source>17</source> <!-- Fonte para JDK 17 -->
+						<target>17</target> <!-- Compilação para JDK 17 -->
+					</configuration>
 				</plugin>
 			</plugins>
 		</build>
