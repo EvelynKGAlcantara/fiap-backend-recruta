@@ -93,6 +93,11 @@ public class JobController {
                 }
             }
 
+            if (job.getCompany() != null && job.getCompany().getId() == 0) {
+                Company newCompany = companyDao.save(job.getCompany());
+                job.getCompany().setId(newCompany.getId());
+            }
+
             dao.save(job);
             return ResponseEntity.ok(job);
         } catch (Exception e) {
