@@ -66,10 +66,21 @@ public class User {
 	@Column(name = "experiences", length = 200)
 	private String professionalExperiences;
 
+	@Column(name = "role", length = 100)
+	private String role = "client";
+
 	@JsonIgnoreProperties("users")
 	@ManyToMany
 	@JoinTable(name = "job_users", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "job_id"))
 	private List<Job> jobs = new ArrayList<>();
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public int getId() {
 		return id;
